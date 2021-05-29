@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Parallex scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="images/bird1.png" id="bird1">
+        <img src="images/bird2.png" id="bird2">
+        <img src="images/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+
+        <img src="images/rocks.png" id="rocks">
+        <img src="images/water.png" id="water">
+    </section>
+
+    <div class="sec">
+        <h2>Parallex Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad at natus earum cum illum pariatur officiis nobis
+            nesciunt non omnis error, minus laborum, aliquam aliquid. Ipsum laborum minima deleniti ea obcaecati amet
+            corrupti dolore beatae optio, nesciunt pariatur sed quae tenetur nihil necessitatibus, iusto labore
+            temporibus odit sapiente adipisci molestiae aperiam. Ad praesentium ex, sapiente repudiandae unde numquam
+            minus nam. Nam, atque. Quibusdam, id iusto! Perferendis, amet? Asperiores optio aspernatur veniam quidem eum
+            ratione harum delectus voluptatem fugit magnam, obcaecati quae dolores ea sequi quibusdam libero. Reiciendis
+            nesciunt ducimus dolore recusandae nam ipsa iusto assumenda, vitae temporibus commodi quam ipsum et dolorem
+            esse harum. Commodi voluptas itaque amet architecto eius placeat nisi iusto eaque temporibus, molestias in
+            ducimus. Beatae, porro. Nesciunt vel nemo quis dolor nostrum. Eligendi cum accusantium libero minima nihil
+            eos ipsa quidem placeat, dolorem quo rerum adipisci ex? Inventore esse ipsam, corporis sapiente tempora
+            fugiat, earum molestias quasi vel hic non deleniti minus voluptatibus ut quas eum veniam iusto animi ad
+            officia enim. Porro exercitationem sint veritatis obcaecati alias molestiae architecto fugiat quisquam
+            facere earum eum sequi, aliquam cum, dolore ea eligendi provident sit animi incidunt numquam, doloribus eos
+            nostrum perferendis? Iure, animi? Modi eius consectetur consequatur repudiandae recusandae commodi corporis
+            exercitationem quibusdam ut inventore adipisci eos iusto ducimus necessitatibus magni corrupti natus quia
+            placeat eligendi, ipsam non eum? Omnis architecto et ullam quaerat est. Soluta magnam incidunt magni
+            pariatur corrupti dolorum ducimus sunt reiciendis in totam quis, quod saepe voluptatum repellendus eaque
+            accusamus porro sequi maxime officiis veniam? Voluptatem minus illo adipisci cumque veniam exercitationem,
+            eligendi mollitia assumenda at quisquam, consequatur hic quasi molestias quis officia amet repudiandae
+            nesciunt, quo nihil accusantium aperiam error! Magni, maxime maiores, ducimus facilis hic nisi fugiat error
+            porro ea cumque recusandae aperiam non facere dolorem quos adipisci veniam quis ullam rem dolor obcaecati
+            iure explicabo laborum! Sed culpa deserunt atque unde voluptas ea reprehenderit ut, cum perspiciatis
+            exercitationem perferendis assumenda optio eum explicabo ratione incidunt consectetur sapiente nesciunt.
+            Saepe dolore aperiam commodi, assumenda eligendi ipsum dolorem vitae, sit et quaerat nobis odio beatae
+            delectus suscipit aspernatur eius ducimus, accusamus iste unde! Vero ratione sit amet rem fuga earum illum
+            excepturi molestias nesciunt consequuntur! Temporibus autem explicabo, fugit corporis in ipsam mollitia
+            suscipit necessitatibus quaerat expedita accusantium reprehenderit veniam tempora exercitationem voluptatem
+            itaque nihil sit cum excepturi optio, ratione, maiores sint. Sapiente blanditiis earum tempore, labore
+            perferendis quisquam a reiciendis suscipit voluptatibus vel atque accusamus exercitationem. Possimus illo
+            numquam voluptate non? Enim voluptates earum impedit alias amet accusamus ipsam ut incidunt quo animi nulla
+            aut praesentium tenetur cupiditate nam quibusdam quidem aperiam delectus nihil, labore provident at fugit.
+            Rerum sint, eligendi, corporis dolorem ipsam sequi provident nulla doloremque possimus consequuntur
+            reprehenderit aliquid porro laudantium iure cum laboriosam incidunt facilis ipsa accusantium minus animi
+            quasi consectetur, voluptatibus optio. Eveniet rerum recusandae voluptas adipisci magnam eaque laboriosam ab
+            ullam nesciunt asperiores tempore optio facere voluptatem eligendi, doloremque mollitia ratione magni error
+            est quis consequuntur nihil neque animi. Nulla amet possimus illum dicta consequatur?</p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
